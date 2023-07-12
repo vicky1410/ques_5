@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .event {
+        text-decoration: underline;
+        color: blueviolet;
+        cursor: pointer;
+      }
+      td,
+      th {
+        padding: 4px;
+        text-align: center;
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calender of October 2024</h1>
+
+    <table>
+      <thead>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td class="event">2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td class="event">15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td class="event">20</td>
+        <td class="event">21</td>
+      </tr>
+      <tr>
+        <td class="event">22</td>
+        <td class="event">23</td>
+        <td class="event">24</td>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td class="event">28</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td>30</td>
+        <td>31</td>
+      </tr>
+    </table>
+    <p id="dis"></p>
+    <script>
+      let eve = document.getElementsByClassName("event");
+      let dis = document.getElementById("dis");
+
+      let d = document.getElementsByTagName("td");
+      eve[0].addEventListener("click", function () {
+        dis.innerHTML = "Mahatma Gandhi Jayanti";
+      });
+      eve[1].addEventListener("click", function () {
+        dis.innerHTML = "First Day of Sharad Navrati";
+      });
+      eve[2].addEventListener("click", function () {
+        dis.innerHTML = "First Day of Durga Puja Festivites";
+      });
+
+      eve[3].addEventListener("click", function () {
+        dis.innerHTML = "Maha Saptami";
+      });
+      eve[4].addEventListener("click", function () {
+        dis.innerHTML = "Maha Ashtami";
+      });
+      eve[5].addEventListener("click", function () {
+        dis.innerHTML = "Maha Navami";
+      });
+      eve[6].addEventListener("click", function () {
+        dis.innerHTML = "Dussehra";
+      });
+      eve[7].addEventListener("click", function () {
+        dis.innerHTML = "Maharishi Valmiki Jayanti";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Doller to Indian currency</h1>
+    <input type="text" placeholder="Enter Amount" name="" id="amount" />
+    <button>calculate</button>
+    <p id="dis"></p>
+
+    <script>
+      let cal = document.getElementsByTagName("button")[0];
+      let dis = document.getElementById("dis");
+      cal.addEventListener("click", function () {
+        let am = document.getElementById("amount").value;
+        let cha = am * 82.44;
+        dis.innerHTML = "the curreny from doller to indian rupee is " + cha;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="account_number">
+        <!-- <label for="name">Name</label>
+        <input type="text" id="name" /> -->
+        <label for="accnum">Account Number</label>
+        <input type="text" placeholder="Enter Account Number" id="accnum" />
+        <button class="accClick" onclick="detail_show()">Submit</button>
+      </div>
+
+      <div class="details">
+        <p id="name"></p>
+        <p id="acnum"></p>
+        <p id="balance"></p>
+      </div>
+
+      <div class="depWid">
+        <label for="wid">Withdrawal</label>
+        <input type="text" placeholder="Enter Amount" id="wid" />
+        <button id="wid_Am" onclick="wid_Am()">Withdrawal</button>
+        <p id="wl"></p>
+        <label for="dep">Deposit</label>
+        <input type="text" placeholder="Enter Amount" name="" id="dep" />
+        <button id="dep_Am" onclick="dep_Am()">Withdrawal</button>
+        <p id="d"></p>
+      </div>
+    </div>
+    <script src="javascript.js"></script>
+  </body>
+</html>

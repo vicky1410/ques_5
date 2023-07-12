@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: center;
+      }
+      .container {
+        width: 10%;
+        background-color: rgb(199, 211, 211);
+        padding: 2rem;
+        margin: auto;
+        border-radius: 0.5rem;
+        text-align: center;
+        box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.171);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Time</h1>
+      <h3 id="time">00:00:000</h3>
+      <button>start</button>
+      <button>stop</button>
+      <button>reset</button>
+    </div>
+
+    <script>
+      let mil = 0;
+      let sec = 0;
+      let min = 0;
+      let time = document.getElementById("time");
+      console.log(time);
+      function start() {
+        mil++;
+        if (mil == 1000) {
+          sec++;
+          mil = 0;
+        }
+
+        if (sec == 60) {
+          min++;
+          sec = 0;
+        }
+
+        if (min == 60) {
+          min = 0;
+        }
+        m = min < 10 ? "0" + min : min;
+        s = sec < 10 ? "0" + sec : sec;
+        ml = mil < 10 ? "0" + mil : mil;
+
+        time.innerHTML = `${m}:${s}:${ml}`;
+      }
+
+      starting = () => {
+        st = setInterval(start, 1);
+      };
+
+      clearing = () => {
+        clearInterval(st);
+      };
+      reset = () => {
+        clearInterval(st);
+
+        mil = 0;
+        sec = 0;
+        min = 0;
+
+        time.innerHTML = "00:00:000";
+      };
+
+      let bu = document.getElementsByTagName("button");
+      bu[0].addEventListener("click", starting);
+      bu[1].addEventListener("click", clearing);
+      bu[2].addEventListener("click", reset);
+    </script>
+  </body>
+</html>

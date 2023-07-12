@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        font-size: 1.5rem;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+        margin: auto;
+        height: 100vh;
+        background-color: aliceblue;
+      }
+      .container > * {
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <label for="fact">Enter the Factorial number</label>
+      <input type="number" required min="1" id="fact" />
+      <button type="submit" id="click" onclick="fact()">Submit</button>
+      <p id="out"></p>
+    </div>
+  </body>
+
+  <script>
+    function fact() {
+      let fact_num = document.getElementById("fact").value;
+      let f = fact_num;
+      if (fact_num > 0) {
+        function factorial(fact_num) {
+          if (fact_num == 0) {
+            return 1;
+          } else {
+            fact_num = fact_num * factorial(fact_num - 1);
+            return fact_num;
+          }
+        }
+        document.getElementById(
+          "out"
+        ).innerHTML = `The Factorial of ${f} is ${factorial(
+          fact_num
+        ).toLocaleString("ta-IN")}`;
+      } else {
+        document.getElementById(
+          "out"
+        ).innerHTML = `The Enter value should be positive value`;
+      }
+    }
+  </script>
+</html>
